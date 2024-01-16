@@ -10,7 +10,7 @@ This is a collection of four games in C. It has got the authentication system an
 * General Quiz
 * RockPaperScissors
 
-This was developed as a academic project in first semester. Pulchowk Campus 
+This was developed as a academic project in first semester.
 
 ### The team of this project: 
 1. Anil Shrestha
