@@ -23,7 +23,7 @@ void end(void)
     gotoxy(50, 20);
     Sleep(500);
     ;
-    printf("WE ARE GOING TO MISS YOU");
+    printf("WE ARE GONING TO MISS YOU");
     getch();
 }
 

@@ -3,16 +3,18 @@
 #include <conio.h>
 #include <stdlib.h>
 
+char square[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+
 void playTicTacToe()
 {
+    system("cls");
     system("color 0b");
-    char square[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
     int player = 1, i, choice;
     char mark; // X or O
     do
     {
-        drawBoard(square);
+        drawBoard();
         player = (player % 2) ? 1 : 2;
         printf("Player %d , enter the choice : \n", player);
         scanf("%d", &choice);
@@ -43,7 +45,7 @@ void playTicTacToe()
             player--;
             getch();
         }
-        i = checkWin(square);
+        i = checkWin();
         player++;
     } while (i == -1);
 
@@ -59,7 +61,7 @@ void playTicTacToe()
     getch();
 }
 
-int checkWin(char square[10])
+int checkWin()
 {
     if (square[1] == square[2] && square[2] == square[3])
         return 1;
@@ -84,9 +86,8 @@ int checkWin(char square[10])
         return -1;
 }
 
-void drawBoard(char square[10])
+void drawBoard()
 {
-
     system("cls");
     printf("\n \n\t\t\t\t\t TIC TAC TOE\n\n");
     printf("\t\t\t\t\tplayer1 (X) - player2 (O)\n\n\n");

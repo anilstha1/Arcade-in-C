@@ -7,11 +7,13 @@ int random_num()
 {
     srand(time(NULL));
     int num = rand() % 609;
+
     return num;
 }
 
 char table(int i)
 {
+
     for (int j = 0; j <= (5 - i); j++)
     {
         printf("\t\t\t\t\t|     |     |     |     |     |\n");

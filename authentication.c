@@ -23,33 +23,10 @@ void takeinput(char ch[50])
 
 void takepassword(char pwd[50])
 {
-
-    int i, count = 0;
-    char ch;
+    int count;
 NOT_ENOUGH:
-    while (1)
-    {
-        ch = getch();
-        if (ch == ENTER || ch == TAB)
-        {
-            pwd[i] = '\0';
-            break;
-        }
-        else if (ch == BCKSPC)
-        {
-            if (i > 0)
-            {
-                i--;
-                printf("\b \b");
-            }
-        }
-        else
-        {
-            pwd[i++] = ch;
-            printf("* \b");
-            count++;
-        }
-    }
+    gets(pwd);
+    count = strlen(pwd);
     if (count < 7)
     {
         printf("\nPassword should be at least 8 characters containing lowercase, uppercase letters and symbols.\n");
@@ -97,7 +74,7 @@ void signup()
         }
         else
         {
-            printf("\n\n!Passwords didn't match.\n\n");
+            printf("\n\n!Password donot matched\n\n");
             Beep(750, 100);
 
             goto AGAIN;

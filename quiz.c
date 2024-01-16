@@ -20,17 +20,17 @@ int random()
     srand(time(NULL));
     int a = rand();
 
-    return a % 50;
+    return a % 5;
 }
 
 void play()
 {
     int score = 0;
-    quiz q[50];
+    quiz q[100];
     FILE *fp;
     fp = fopen("question.txt", "r");
 
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < 5; i++)
     {
         fread(&q[i], sizeof(q[i]), 1, fp);
     }
